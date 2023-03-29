@@ -37,12 +37,8 @@ export default component$(() => {
     <Resource
       value={jokes}
       onPending={() => <div>loading...</div>}
-      onResolved={(jokes) => (
-        <ul>
-          {jokes.map((joke) => (
-            <li>{joke.value}</li>
-          ))}
-        </ul>
+      onResolved={(joke) => (
+        <div>{joke.value}</div>
       )}
     />
   );
